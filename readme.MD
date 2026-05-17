@@ -22,7 +22,7 @@ mysql -h roboshop-dev.czn6yzxlcsiv.us-east-1.rds.amazonaws.com -u root -pRoboSho
 ```
 * Clone shipping component into bastion
 ```
-git clone https://github.com/daws-81s/shipping.git
+git clone https://github.com/narayana6/shipping.git
 ```
 * Load the data into mysql
 ```
