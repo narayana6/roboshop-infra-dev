@@ -82,8 +82,9 @@ resource "aws_cloudfront_distribution" "roboshop" {
 
 module "records" {
   source  = "terraform-aws-modules/route53/aws//modules/records"
+  version = "2.11.1"
 
-  zone_name = var.zone_name #daws81s.online
+  zone_name = var.zone_name #bnsaws.online
   records = [
     {
       name    = "roboshop-cdn" # *.app-dev

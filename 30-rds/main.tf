@@ -11,7 +11,9 @@ module "db" {
   db_name  = "transactions"
   username = "root"
   manage_master_user_password = false
-  password = "RoboShop1"
+  password_wo = "RoboShop1"
+  password_wo_version = 1 
+  
   port     = "3306"
 
   vpc_security_group_ids = [local.mysql_sg_id]
@@ -63,6 +65,7 @@ module "db" {
 module "records" {
   source  = "terraform-aws-modules/route53/aws//modules/records"
 
+  version = "2.11.1"
   zone_name = var.zone_name
 
   records = [

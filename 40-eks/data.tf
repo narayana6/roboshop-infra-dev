@@ -20,11 +20,11 @@ data "aws_ssm_parameter" "vpc_id" {
 data "aws_ami" "joindevops" {
 
 	most_recent      = true
-	owners = ["973714476881"]
+	owners = ["655431895664"]
 	
 	filter {
 		name   = "name"
-		values = ["RHEL-9-DevOps-Practice"]
+		values = ["bns"]
 	}
 	
 	filter {

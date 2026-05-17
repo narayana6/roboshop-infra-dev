@@ -1,5 +1,6 @@
 module "ingress_alb" {
   source = "terraform-aws-modules/alb/aws"
+  version = "~> 9.13.0"
 
   internal = false
   name    = "${local.resource_name}-ingress-alb" #roboshop-dev-app-alb
@@ -51,8 +52,9 @@ resource "aws_lb_listener" "https" {
 
 module "records" {
   source  = "terraform-aws-modules/route53/aws//modules/records"
+   version = "2.11.1"
 
-  zone_name = var.zone_name #daws81s.online
+  zone_name = var.zone_name #bnsaws.online
   records = [
     {
       name    = "roboshop-${var.environment}" # roboshop-dev.daws81s.online
