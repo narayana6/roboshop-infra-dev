@@ -18,7 +18,7 @@ We are using bastion as our EKS client, so it will have
 * Make sure MySQL instance allows port no 3306 from bastion
 
 ```
-mysql -h roboshop-dev.czn6yzxlcsiv.us-east-1.rds.amazonaws.com -u root -pRoboShop1
+mysql -h roboshop-dev.c81ww6msyddp.us-east-1.rds.amazonaws.com -u root -pRoboShop1
 ```
 * Clone shipping component into bastion
 ```
@@ -80,7 +80,7 @@ eksctl create iamserviceaccount \
 --cluster=expense-dev \
 --namespace=kube-system \
 --name=aws-load-balancer-controller \
---attach-policy-arn=arn:aws:iam::315069654700:policy/AWSLoadBalancerControllerIAMPolicy \
+--attach-policy-arn=arn:aws:iam::655431895664:policy/AWSLoadBalancerControllerIAMPolicy \
 --override-existing-serviceaccounts \
 --region us-east-1 \
 --approve
